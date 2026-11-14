@@ -1,0 +1,8 @@
+{
+  "name":"evergreen-qa-teaching-lab",
+  "version":"1.0.0",
+  "private":true,
+  "description":"Synthetic Evergreen-style CI QA training; not product tests",
+  "scripts":{"test:ui":"playwright test","report:allure":"allure generate reports/allure-results --clean -o reports/allure-report"},
+  "devDependencies":{"@playwright/test":"^1.56.0","allure-commandline":"^2.34.1","typescript":"^5.9.0"}
+}

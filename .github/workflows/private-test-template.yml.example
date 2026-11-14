@@ -1,0 +1,19 @@
+# EXAMPLE ONLY; intentionally not an active GitHub Actions workflow.
+# Requires security review, approved TEST endpoint, runner network path, test identities,
+# OIDC (short-lived) AWS credentials, least privileges and data-handling controls.
+name: Evergreen private TEST - example, do not run as-is
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+  id-token: write # only if the actual workflow assumes an approved AWS role via OIDC
+jobs:
+  integration-test:
+    runs-on: [self-hosted, linux, evergreen-approved-test]
+    environment: evergreen-test # protected environment approvals
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test approved private connectivity
+        run: echo 'Replace with PRIVATE TEST endpoint health check, never production!'
+      - name: Run approved integration suite
+        run: echo 'Replace with actual tests against TEST environment and stubbed actuators.'

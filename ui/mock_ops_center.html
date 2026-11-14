@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Evergreen SYNTHETIC Ops Center</title>
+<style>body{font:16px Arial,sans-serif;max-width:760px;margin:50px auto;padding:20px;color:#17324d}header{padding:18px;background:#ffe6a4;border:2px solid #ad711b;border-radius:12px}main{margin-top:28px;border:1px solid #abc;padding:24px;border-radius:12px}select,button{padding:10px;margin:10px 0;font-size:16px}#status{font-weight:700;font-size:23px}</style></head>
+<body><header><strong>TRAINING SIMULATOR ONLY — NOT THE UCSF PRODUCT</strong><p>Local synthetic page, no external network or real credentials.</p></header>
+<main><h1>Training Campaign SYN-006</h1><p>Role:</p><select id="role" aria-label="Persona"><option value="exec_audit">Executive auditor</option><option value="patch_ops_engineer">Patch operations engineer</option></select>
+<p>Status: <span id="status">PARKED</span></p><button id="resume" disabled>Resume campaign</button><p id="message">Select patch operations engineer to enable the training control.</p></main>
+<script>
+const role=document.getElementById('role'), resume=document.getElementById('resume'), status=document.getElementById('status'), msg=document.getElementById('message');
+role.addEventListener('change',()=>{resume.disabled=role.value!=='patch_ops_engineer';msg.textContent=resume.disabled?'Read-only persona':'Authorized persona (synthetic demo)';});
+resume.addEventListener('click',()=>{if(role.value==='patch_ops_engineer'){status.textContent='READY';msg.textContent='Explicit resume recorded (synthetic demo)'}});
+</script></body></html>

@@ -1,0 +1,7 @@
+Requirement_or_design_reference,Training_case_ID,Test_layer,Script,Expected,Environment,Run_evidence,Status
+TEP Ch.7 kill switch LAB EXAMPLE,LAB-L01,L1,tests/test_layers.py::test_L1_kill_switch_parks,PARK with KILL_SWITCH,LOCAL_SYNTHETIC_TRAINING,reports/evidence,TRAINING_ONLY
+Connector ICD fixture concept LAB EXAMPLE,LAB-L02,L2,tests/test_layers.py::test_L2_fixture_normalization,Typed fixture normalized,LOCAL_SYNTHETIC_TRAINING,reports/evidence,TRAINING_ONLY
+Policy Guide §11 vector concept LAB EXAMPLE,LAB-L03,L3,tests/test_layers.py::test_L3_policy_vectors,Unknown and stale park,LOCAL_SYNTHETIC_TRAINING,reports/evidence,TRAINING_ONLY
+TEP Ch.7 campaign LAB EXAMPLE,LAB-L06,L6,tests/test_layers.py::test_L6_campaign_park_and_verify_seal,Parked with valid toy seal,LOCAL_SYNTHETIC_TRAINING,reports/evidence,TRAINING_ONLY
+Security Workbook §4.2 subset LAB EXAMPLE,LAB-L09,L9,tests/test_layers.py::test_L9_default_deny,Read-only cannot kill,LOCAL_SYNTHETIC_TRAINING,reports/evidence,TRAINING_ONLY
+TEP Ch.11 persona concept LAB EXAMPLE,LAB-L10,L10,tests/test_layers.py::test_L10_training_readonly_audit_walkthrough,Auditor read only,LOCAL_SYNTHETIC_TRAINING,reports/evidence,TRAINING_ONLY
